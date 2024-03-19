@@ -1,0 +1,38 @@
+def dem_so_luong_ki_tu_va_tu(st):
+    so_luong_ki_tu = len(st)
+    so_luong_tu = len(st.split())
+    print("Số lượng kí tự trong chuỗi:",  so_luong_ki_tu )
+    print("Số lượng từ trong chuỗi:",  so_luong_tu )
+def tim_kiem_tu_khoa(st, key):
+    so_lan_xuat_hien = st.count(key)
+    if so_lan_xuat_hien > 0:
+        print(f"Từ khóa '{key}' xuất hiện trong chuỗi {so_lan_xuat_hien} lần.")
+    else:
+        print("Từ khóa không xuất hiện trong chuỗi.")
+def tach_chuoi_ki_tu(st):
+    ki_tu = st.split()
+    print("Các từ trong chuỗi:")
+    for tu in ki_tu:
+        print(tu)
+while True:
+    print("Menu lựa chọn:")
+    print("1. Đếm số lượng kí tự và từ")
+    print("2. Tìm kiếm từ khóa")
+    print("3. Tách chuỗi kí tự")
+    print("4. Thoát")
+    chon = input("Bạn hãy chọn: ")
+    if chon == '1':
+        st = input("Nhập vào một chuỗi kí tự: ")
+        dem_so_luong_ki_tu_va_tu(st)
+    elif chon == '2':
+        st = input("Nhập vào một chuỗi kí tự: ")
+        key = input("Nhập vào từ khóa cần tìm: ")
+        tim_kiem_tu_khoa(st, key)
+    elif chon == '3':
+        st = input("Nhập vào một chuỗi kí tự: ")
+        tach_chuoi_ki_tu(st)
+    elif chon == '4':
+        print("Chương trình kết thúc.")
+        break
+    else:
+        print("Lựa chọn không hợp lệ. Vui lòng chọn lại.")
